@@ -13,7 +13,8 @@ declare module 'rn-pdf-reader-js' {
     style?: StyleProp<ViewStyle>,
     webviewStyle?: StyleProp<ViewStyle>,
     onLoad?: (event: NavState) => void,
-    noLoader?: boolean
+    noLoader?: boolean,
+    colorLoader?: string
   }
 
   interface IState {

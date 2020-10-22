@@ -75,9 +75,9 @@ async function urlToBlob(source: Source) {
   })
 }
 
-const Loader = (colorSpinner) => (
+const Loader = (props) => (
   <View style={{ flex: 1, justifyContent: 'center' }}>
-    <ActivityIndicator size="large" color={colorSpinner.color}/>
+    <ActivityIndicator size="large" {...props}/>
   </View>
 )
 
@@ -105,7 +105,7 @@ type Props = {
   webviewStyle: object,
   onLoad: func,
   noLoader: boolean,
-  colorLoader: String
+  loaderColor: String
 }
 
 type State = {
@@ -164,7 +164,7 @@ class PdfReader extends Component<Props, State> {
 
   render() {
     const { ready, data, ios, android } = this.state
-    const { style, webviewStyle, onLoad, noLoader, onLoadEnd, onError, colorLoader } = this.props
+    const { style, webviewStyle, onLoad, noLoader, onLoadEnd, onError, loaderColor } = this.props
 
     if (data && ios) {
       return (
@@ -202,7 +202,7 @@ class PdfReader extends Component<Props, State> {
       )
     }
 
-    return (<View style={[styles.container, style]}>{!noLoader && !ready && <Loader color={colorLoader} />}</View>)
+    return (<View style={[styles.container, style]}>{!noLoader && !ready && <Loader color={loaderColor} />}</View>)
   }
 }
 

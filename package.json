@@ -33,13 +33,7 @@
   },
   "dependencies": {
     "buffer": "5.1.0",
-    "expo": "^39.0.3",
-    "expo-constants": "^9.2.0",
-    "expo-file-system": "^9.2.0",
-    "js-base64": "2.4.5",
-    "react": "^17.0.0",
-    "react-native": "^0.63.3",
-    "react-native-webview": "^10.9.2"
+    "js-base64": "2.4.5"
   },
   "devDependencies": {
     "crypto": "1.0.1",
